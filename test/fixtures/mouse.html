@@ -5,8 +5,6 @@
  <title>Mouse fixture</title>
 </head>
 <body>
-
-  <h1>Mouse test</h1>
   <div id="test" style="">
     Test area
   </div>
@@ -48,10 +46,22 @@ function handler(e) {
   return false;
 }
 
+function mouseoverHandler(e) {
+  test.innerHTML = "mouseover";
+  return false;
+}
+
+function mouseoutHandler(e) {
+  test.innerHTML = "mouseout";
+  return false;
+}
+
 document.getElementById("test");
 test.addEventListener('mousedown', handler, false);
 test.addEventListener('mouseup', handler, false);
 test.addEventListener('click', handler, false);
+test.addEventListener('mouseover', mouseoverHandler, false);
+test.addEventListener('mouseout', mouseoutHandler, false);
 </script>
 
 </body>
